@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        var dataArray = [];
+        dataArray = [23,100,53,99,11];
+        var pjg_array = dataArray.length;
+        var dummy;
+
+        alert ("Data Array awal"+ dataArray.toString());
+        for (var i=0; i<pjg_array;i++){
+            for (var j=0; 1<pjg_array;j++){
+            if (dataArray[j] > dataArray[i]){
+                dummy = dataArray[j];
+                dataArray[j] = dataArray [i];
+                dataArray[i] = dummy;
+
+        }
+    }
+    alert("Data Array Setelah disortiir"+dataArray.toString());
+}
+    </script>
+</body>
+</html>

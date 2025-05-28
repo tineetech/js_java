@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var harga;
+        var nama_barang
+        var ket =""
+        var jumlah=0;
+        var total=0;
+        var subtotal=0;
+
+    function cek_barang(){
+            var nama = document.getElementById("listbarang").value;
+            switch(nama){
+        case 'buku':
+            harga = 10000;
+            nama_barang = "buku";
+            Break;
+        case 'tas':
+            harga = 50000;
+            nama_barang = "tas";
+            Break;
+        case 'pensil':
+            harga = 5000;
+            nama_barang = "pensil";
+            Break;
+        case 'penghapus':
+            harga = 15000;
+            nama_barang = "penghapus";
+            Break;
+
+            }
+            jumlah = parseInt (document.getElementById("jumlah".value));
+            subtotal = jumlah * harga;
+            total = total + subtotal;
+            ket = ket + nama_barang + ":" + harga+ ":" +jumlah + "=" +subtotal+"<br>";
+            document.getElementById("barang").innerHTML = ket;
+            document.getElementById("total").innerHTML="Total Belanja"=+total;
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        barang:
+        <select id="listbarang">
+        <option value="buku">buku</option>
+        <option value="tas">tas</option>
+        <option value="pensil">pensil</option>
+        <option value="penghapus">penghapus</option>
+    </select>
+    <button id="tambah" onclick="cek_barang()">(+)</button>
+</div>
+
+<div>
+    jumlah:
+    <input type="text" id="jumlah">
+</div>
+<div id="barang"></div>
+<div id="total"></div>
+</body>
+</html>
